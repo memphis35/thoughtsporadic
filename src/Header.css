@@ -1,0 +1,55 @@
+.header {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.apps-button {
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 6px;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 30%;
+    background-color: black
+}
+
+
+@media screen and (min-width: 740px) {
+    .header {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .logo {
+        height: 40px;
+    }
+
+    .header {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .apps-button {
+        display: none;
+    }
+}
+

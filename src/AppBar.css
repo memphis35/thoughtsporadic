@@ -1,0 +1,34 @@
+.app-bar-wrapper {
+    width: 100%;
+    max-width: 800px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-bar {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    background-color: lightgray;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    box-shadow: 0 -1px  2px lightgray, -1px 0 2px lightgray, 1px 0 2px lightgray;
+}
+
+.app-icon {
+    margin-top: -30px;
+    width: 50px;
+    position: relative;
+    transition: 0.25s all;
+}
+
+.app-icon:hover {
+    transform: translateY(-8px);
+}

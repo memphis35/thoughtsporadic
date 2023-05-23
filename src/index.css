@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    src: local("big_shoulder"), url("fonts/big_shoulder.ttf") format('truetype');
+    font-face-name: "Big Shoulder";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    src: local("BigShouldersDisplay-Regular"), url("fonts/BigShouldersDisplay-Regular.ttf") format('truetype');
+    font-face-name: "BigShoulder";
+}
+
+@font-face {
+    src: local("ubuntu_mono"), url("fonts/ubuntu_mono.ttf") format('truetype');
+    font-face-name: "Ubuntu Mono";
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', "Ubuntu Mono",
+    sans-serif;
+    background-image:
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+            url("./img/stars.jpg");
+    display: flex;
+}
+
+#root {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }

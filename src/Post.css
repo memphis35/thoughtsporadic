@@ -1,0 +1,115 @@
+section {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+p {
+    margin: 0;
+}
+
+.post {
+    min-width: 300px;
+    max-width: 720px;
+}
+
+.top-bar {
+    height: 40px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+
+    background-color: lightgrey;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.address-bar {
+    width: 100px;
+    max-height: 20px;
+    background-color: white;
+    flex-grow: 1;
+
+    border-radius: 5px;
+    padding: 5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu {
+    min-width: 17px;
+    min-height: 17px;
+    background-color: white;
+
+    border-radius: 5px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stripe {
+    height: 2px;
+    background-color: black;
+}
+
+.post-body {
+    background-color: ivory;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    box-sizing: content-box;
+}
+
+.post-title {
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.post-image {
+    max-width:100%;
+    width: inherit;
+}
+
+.post-textarea {
+    text-align: justify;
+}
+
+.red {
+    background-color: #d70202;
+}
+
+.green {
+    background-color: #5db700;
+}
+
+.blue {
+    background-color: #6161ff;
+}
