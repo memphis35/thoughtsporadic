@@ -7,11 +7,11 @@
 
 .tag {
     padding: 5px 10px;
-    border: 2px solid rosybrown;
+    border: 2px solid mistyrose;
     border-radius: 20px;
 }
 
 #marked-tag {
     border: 2px solid black;
-    background-color: rosybrown;
+    background-color: mistyrose;
 }

@@ -1,8 +1,9 @@
 .app-bar-wrapper {
-    width: 100%;
     max-width: 800px;
     position: fixed;
-    bottom: 0;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
 }
