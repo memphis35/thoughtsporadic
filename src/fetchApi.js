@@ -1,7 +1,7 @@
-const baseUrl = 'http://be.thoughtporadic.com';
+const baseUrl = 'http://be.thoughtsporadic.com';
 
 export const fetchAllPosts = chosenTag => {
-    const postsUrl = baseUrl- + '/posts' + (chosenTag ? `/tag/${chosenTag}` : '');
+    const postsUrl = baseUrl + '/posts' + (chosenTag ? `/tag/${chosenTag}` : '');
     fetch(postsUrl).then(response => response.json());
 }
 
