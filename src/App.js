@@ -3,7 +3,7 @@ import Header from "./Header";
 import Wall from './Wall';
 import Tags from "./Tags";
 
-import {fetchAllPosts, fetchAllTags} from './fetchedData.js'
+import {fetchAllPosts, fetchAllTags} from './fetchApi.js'
 
 import './fonts/ubuntu_mono.ttf';
 
