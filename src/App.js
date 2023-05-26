@@ -7,9 +7,20 @@ import './fonts/ubuntu_mono.ttf';
 
 import {useEffect, useState} from "react";
 
-const fetchAllPosts = chosenTag => {
-    return fetch('http://54.160.87.55:8080/posts' + chosenTag ? ('/tags/' + chosenTag) : '')
+const fetchAllPosts = () => {
+    return fetch('http://54.160.87.55:8080/posts')
         .then(response => response.json());
+}
+
+const fetchPostsWithTags = (tag) => {
+    return fetch('http://54.160.87.55:8080/posts/tag/' + tag)
+        .then(response => response.json());
+}
+
+const fetchPosts = tag => {
+    return tag === ''
+        ? fetchAllPosts()
+        : fetchPostsWithTags(tag);
 }
 
 export const fetchAllTags = () => {
@@ -20,7 +31,7 @@ export const fetchAllTags = () => {
 function App() {
     const [posts, setPosts] = useState([]);
     const [tags, setTags] = useState([]);
-    const fetchPosts = chosenTag => fetchAllPosts(chosenTag).then(data => setPosts(data));
+    const fetchPostsAndSet = chosenTag => fetchPosts(chosenTag).then(data => setPosts(data));
     useEffect(() => {
         fetchAllPosts().then(posts => setPosts(posts))
     }, []);
@@ -30,7 +41,7 @@ function App() {
     return (
         <div className='page'>
             <Header/>
-            <Tags fetchPosts={fetchPosts} tags={tags}/>
+            <Tags fetchPosts={fetchPostsAndSet} tags={tags}/>
             <Wall posts={posts}/>
             <AppBar/>
         </div>
