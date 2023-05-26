@@ -3,11 +3,19 @@ import Header from "./Header";
 import Wall from './Wall';
 import Tags from "./Tags";
 
-import {fetchAllPosts, fetchAllTags} from './fetchApi.js'
-
 import './fonts/ubuntu_mono.ttf';
 
 import {useEffect, useState} from "react";
+
+const fetchAllPosts = chosenTag => {
+    return fetch('http://54.160.87.55:8080/posts' + chosenTag ? ('/tags/' + chosenTag) : '')
+        .then(response => response.json());
+}
+
+export const fetchAllTags = () => {
+    return fetch('http://54.160.87.55:8080/tags')
+        .then(response => response.json());
+}
 
 function App() {
     const [posts, setPosts] = useState([]);
